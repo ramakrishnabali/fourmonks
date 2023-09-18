@@ -21,6 +21,7 @@ import Light from "@/public/light.png"
 import Red from "@/public/red.png"
 import White from "@/public/white.png"
 import Yellow from "@/public/yellow.png"
+import BlackScooter from '@/public/blackScooter.png'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,36 +32,49 @@ export default function Home() {
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
-  const [activeColor , setActiveColor] = useState(1)
+  const [inputs , setInputs] = useState({
+    activeColor : 1,
+    activeScooter : scooter
+  })
 
   const colorSelectors = [
     {
       id : 1,
-      color : Green
+      color : Green,
+      image : scooter
     },
     {
       id : 2,
-      color : Grey
+      color : Grey,
+      image : BlackScooter
     },{
       id : 3,
-      color : Blue
+      color : Blue,
+      image : scooter
     },{
       id : 4,
-      color :SkyBlue
+      color :SkyBlue,
+      image : BlackScooter
     },{
       id : 5,
-      color : Light
+      color : Light,
+      image : scooter
     },{
       id : 6,
-      color : Red
+      color : Red,
+      image : BlackScooter
     },{
       id : 7,
-      color : White
+      color : White,
+      image : scooter
     },{
       id : 8,
-      color : Yellow
+      color : Yellow,
+      image : BlackScooter
     }
   ]
+
+
 
   return (
     <main
@@ -117,7 +131,7 @@ export default function Home() {
             <hr  className='w-11/12 m-auto h-[2px] mt-5 mb-5'/>
 
             <div className='w-11/12 m-auto'>
-                <Image src={scooter} alt="scooter" priority={true}  className='m-auto'/>
+                <Image src={inputs.activeScooter} alt="scooter" priority={true}  className='m-auto'/>
             </div>
 
             <div className='w-11/12 m-auto flex justify-between h-auto items-start mt-6 shrink-0'> 
@@ -163,15 +177,15 @@ export default function Home() {
               <h1 className='text-black-900 font-bold text-[23px] leading-9'>Storie</h1>
               <h1 className='text-black text-600  text-[15px]'>Sparkling Black</h1>
             </div>
-            <Image className='h-[85px] w-[100px] ml-auto lg:h-[100px] lg:w-[130px]' priority={true} src={scooter} alt='scooter'/>
+            <Image className='h-[85px] w-[100px] ml-auto lg:h-[100px] lg:w-[130px]' priority={true} src={inputs.activeScooter} alt='scooter'/>
           </div>
 
           <div className='w-full justify-between m-auto flex lg:w-3/4'>
             {colorSelectors.map(eachColor => {
-              const {color,id} = eachColor
-              const active = activeColor === id ? "rounded-full border-4 border-indigo-600":""
+              const {color,id,image} = eachColor
+              const active = inputs.activeColor === id ? "rounded-full border-4 border-indigo-600":""
               return(
-              < Image onClick={()=>{setActiveColor(id)}} key={id} src={color} alt="color" className={`${active} hover:cursor-pointer`} />
+              < Image onClick={()=>{setInputs({...inputs , activeColor : id , activeScooter : image})}} key={id} src={color} alt="color" className={`${active} hover:cursor-pointer`} />
               )
   })}
           </div>
@@ -235,7 +249,7 @@ export default function Home() {
       <hr  className='w-full h-[2px] mt-5 mb-5'/>
       <div className='flex flex-col items-center gap-4  lg:flex lg:flex-row lg:justify-between mb-8'>
         <h1 className=' opacity-70 text-center text-white text-[18px] font-normal'><span className='text-[25px]'>©</span> 2023 Batt:RE. All rights reserved</h1>
-        <div className='lg:flex lg:flex-row gap-10'>
+        <div className='flex lg:gap-10 gap-5'>
           <h1 className='opacity-70 text-white text-center  text-[18px] font-normal'>PRIVACY POLICY</h1>
           <h1 className='opacity-70 text-white text-center  text-[18px] font-normal'>TERMS & CONDITIONS</h1>
         </div>
