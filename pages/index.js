@@ -253,7 +253,7 @@ export default function Home() {
           <h1 className='opacity-70 text-white text-center  text-[18px] font-normal'>PRIVACY POLICY</h1>
           <h1 className='opacity-70 text-white text-center  text-[18px] font-normal'>TERMS & CONDITIONS</h1>
         </div>
-        <div className='flex w-1/3 lg:w-[250px] justify-between gap-17px'>
+        <div className='flex w-2/5 lg:w-[250px] justify-between gap-5'>
           <Image src={Insta} alt='insta'className='w-[24px] h-[24px]'/> 
           <Image src={Fb} alt='fb'className='w-[24px] h-[24px]'/>
           <Image src={Twitter} alt='twitter'className='w-[24px] h-[24px]'/>
