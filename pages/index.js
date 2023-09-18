@@ -90,7 +90,7 @@ export default function Home() {
           <a href="#" className="text-white hover:text-gray-300 text-[20px] text-500 ">Storie</a>
           <a href="#" className="text-white hover:text-gray-300 text-[20px] text-500 ">Loev</a>
           <a href="#" className="text-white hover:text-gray-300 text-[20px] text-500 ">One</a>
-          <a href="#" className="text-white hover:text-gray-300 text-[20px] text-500 ">SuperBike</a>
+          <a href="#" className="text-white hover:text-gray-300 text-[20px] text-500 ">SuperBike <span className='bg-[#FAFF00] text-black text-[12px] p-1 rounded '>new</span> </a>
         </div>
         <div className="hidden lg:flex space-x-5 ml-auto">
           <a href="#" className="text-white hover:text-gray-300 text-[20px] text-500 ">Book Now</a>
@@ -110,7 +110,7 @@ export default function Home() {
           <a href="#" className="mt-[20px] pl-[20px] md:hidden block w-full text-white hover:text-neutral-700 hover:bg-gray-200 text-[20px] text-500 ">Storie</a>
           <a href="#" className="md:hidden mt-[20px] pl-[20px] block text-white hover:text-gray-300 text-[20px] text-500 ">Loev</a>
           <a href="#" className="md:hidden mt-[20px] pl-[20px] block text-white hover:text-gray-300 text-[20px] text-500 ">One</a>
-          <a href="#" className="md:hidden mt-[20px] pl-[20px] block text-white hover:text-gray-300 text-[20px] text-500 ">SuperBike</a>
+          <a href="#" className="md:hidden mt-[20px] pl-[20px] block text-white hover:text-gray-300 text-[20px] text-500 ">SuperBike <span className='bg-[#FAFF00] text-black text-[12px] p-1 rounded '>new</span></a>
           <a href="#" className="block mt-[20px] pl-[20px] text-white hover:text-gray-300 text-[20px] text-500 ">BookNow</a>
           <a href="#" className="block mt-[20px] pl-[20px] text-white hover:text-gray-300 text-[20px] text-500 ">Book a Test Ride</a>
           <a href="#" className="block mt-[20px] pl-[20px] text-white hover:text-gray-300 text-[20px] text-500 ">Became a Dealer</a>
