@@ -247,21 +247,19 @@ export default function Home() {
         </div>
       </div>
       <hr  className='w-full h-[2px] mt-5 mb-5'/>
-      <div className='flex flex-col items-center gap-4  lg:flex lg:flex-row lg:justify-between mb-8'>
-        <h1 className=' opacity-70 text-center text-white text-[18px] font-normal'><span className='text-[25px]'>©</span> 2023 Batt:RE. All rights reserved</h1>
-        <div className='flex lg:gap-10 gap-5'>
+      <div className='w-full flex flex-col items-center gap-4 lg:flex lg:flex-row lg:justify-between mb-8'>
+        <h1 className='lg:w-1/3 opacity-70 text-left text-white text-[18px] font-normal'><span className='text-[25px]'>©</span> 2023 Batt:RE. All rights reserved</h1>
+        <div className='flex lg:gap-10 gap-5 lg:w-1/3'>
           <h1 className='opacity-70 text-white text-center  text-[18px] font-normal'>PRIVACY POLICY</h1>
           <h1 className='opacity-70 text-white text-center  text-[18px] font-normal'>TERMS & CONDITIONS</h1>
         </div>
-        <div className='flex w-3/4 lg:w-[250px] m-auto md:w-2/5 justify-between gap-5'>
+        <div className='flex w-3/4 lg:w-1/5 m-auto md:w-2/5 justify-between gap-5'>
           <Image src={Insta} alt='insta'className='w-[24px] h-[24px]'/> 
           <Image src={Fb} alt='fb'className='w-[24px] h-[24px]'/>
           <Image src={Twitter} alt='twitter'className='w-[24px] h-[24px]'/>
           <Image src={LinkedIn} alt='linkedin'className='w-[24px] h-[24px]'/>
-          <Image src={Youtube} alt='youtube'className='w-[24px] h-[24px]'/>
-          
+          <Image src={Youtube} alt='youtube'className='w-[24px] h-[24px]'/> 
         </div>
-
       </div>
       </div>
     </div>
