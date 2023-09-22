@@ -34,43 +34,52 @@ export default function Home() {
   };
   const [inputs , setInputs] = useState({
     activeColor : 1,
-    activeScooter : scooter
+    activeScooter : scooter,
+    activeName:"Green"
   })
 
   const colorSelectors = [
     {
       id : 1,
       color : Green,
-      image : scooter
+      image : scooter,
+      name:"Green"
     },
     {
       id : 2,
       color : Grey,
-      image : BlackScooter
+      image : BlackScooter,
+      name:"Grey"
     },{
       id : 3,
       color : Blue,
-      image : scooter
+      image : scooter,
+      name:"Blue"
     },{
       id : 4,
       color :SkyBlue,
-      image : BlackScooter
+      image : BlackScooter,
+      name:"SkyBlue"
     },{
       id : 5,
       color : Light,
-      image : scooter
+      image : scooter,
+      name:"LightGreen"
     },{
       id : 6,
       color : Red,
-      image : BlackScooter
+      image : BlackScooter,
+      name:"Red"
     },{
       id : 7,
       color : White,
-      image : scooter
+      image : scooter,
+      name:"White"
     },{
       id : 8,
       color : Yellow,
-      image : BlackScooter
+      image : BlackScooter,
+      name:"Yellow"
     }
   ]
 
@@ -175,17 +184,17 @@ export default function Home() {
               <MdDone  className='h-[20px] w-[20px] m-2'/>
             <div>
               <h1 className='text-black-900 font-bold text-[23px] leading-9'>Storie</h1>
-              <h1 className='text-black text-600  text-[15px]'>Sparkling Black</h1>
+              <h1 className='text-black text-600  text-[15px]'>Sparkling {inputs.activeName}</h1>
             </div>
             <Image className='h-[85px] w-[100px] ml-auto lg:h-[100px] lg:w-[130px]' priority={true} src={inputs.activeScooter} alt='scooter'/>
           </div>
 
           <div className='w-full justify-between m-auto flex lg:w-3/4'>
             {colorSelectors.map(eachColor => {
-              const {color,id,image} = eachColor
+              const {color,id,image,name} = eachColor
               const active = inputs.activeColor === id ? "rounded-full border-4 border-indigo-600":""
               return(
-              < Image onClick={()=>{setInputs({...inputs , activeColor : id , activeScooter : image})}} key={id} src={color} alt="color" className={`${active} hover:cursor-pointer`} />
+              < Image onClick={()=>{setInputs({...inputs , activeName:name, activeColor : id , activeScooter : image})}} key={id} src={color} alt="color" className={`${active} hover:cursor-pointer`} />
               )
   })}
           </div>
