@@ -35,7 +35,8 @@ export default function Home() {
   const [inputs , setInputs] = useState({
     activeColor : 1,
     activeScooter : scooter,
-    activeName:"Green"
+    activeName:"Green",
+    scooterColor:Green
   })
 
   const colorSelectors = [
@@ -133,9 +134,11 @@ export default function Home() {
             <div className='flex justify-between w-11/12 m-auto items-center mt-4 mb-2'>
               <h1 className='w-[116px] text-black text-900  text-[28px]'>Storie</h1>
               <div className='flex items-center justify-between space-x-7'>
-                <div className='bg-black h-[25px] w-[25px] rounded-full'></div>
-                <h1 className='text-black text-600  text-[25px]'>Sparkling Black</h1>
-              </div>
+                {/* <div className='bg-black h-[25px] w-[25px] rounded-full'></div>
+                <h1 className='text-black text-600  text-[25px]'>Sparkling Black</h1>*/}
+                <Image className='rounded-full' src={inputs.scooterColor} alt={`${inputs.activeName}`} priority={true} />
+                <h1 className='text-black text-600  text-[25px]'>Sparkling {inputs.activeName}</h1>
+                </div> 
             </div>
             <hr  className='w-11/12 m-auto h-[2px] mt-5 mb-5'/>
 
@@ -194,7 +197,7 @@ export default function Home() {
               const {color,id,image,name} = eachColor
               const active = inputs.activeColor === id ? "rounded-full border-4 border-indigo-600":""
               return(
-              < Image onClick={()=>{setInputs({...inputs , activeName:name, activeColor : id , activeScooter : image})}} key={id} src={color} alt="color" className={`${active} hover:cursor-pointer`} />
+              < Image onClick={()=>{setInputs({...inputs , scooterColor:color, activeName:name, activeColor : id , activeScooter : image})}} key={id} src={color} alt="color" className={`${active} hover:cursor-pointer`} />
               )
   })}
           </div>
